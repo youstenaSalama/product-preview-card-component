@@ -1,0 +1,124 @@
+:root {
+  --primary-green: hsl(158, 36%, 37%);
+  --primary-green-dark: hsl(158, 42%, 18%);
+  --neutral-black: hsl(212, 21%, 14%);
+  --neutral-grey: hsl(228, 12%, 48%);
+  --neutral-cream: hsl(30, 38%, 92%);
+  --neutral-white: hsl(0, 0%, 100%);
+}
+
+body {
+  background-color: var(--neutral-cream);
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+  flex-direction: column;
+}
+
+.card {
+  background: var(--neutral-white);
+  border-radius: 12px;
+  overflow: hidden;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-img img {
+  width: 100%;
+  display: block;
+}
+
+.card-info {
+  padding: 24px;
+  text-align: left;
+}
+
+.category {
+  color: var(--neutral-grey);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-family: 'Fraunces', serif;
+  font-size: 28px;
+  color: var(--neutral-black);
+  margin: 10px 0;
+}
+
+.description {
+  font-size: 14px;
+  color: var(--neutral-grey);
+  margin: 10px 0 20px;
+  line-height: 1.5;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.price-new {
+  color: var(--primary-green);
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.price-old {
+  color: var(--neutral-grey);
+  text-decoration: line-through;
+}
+
+.btn {
+  background: var(--primary-green);
+  color: var(--neutral-white);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  background: var(--primary-green-dark);
+}
+
+.attribution {
+  font-size: 15px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.attribution a {
+  color: var(--primary-green-dark);
+}
+
+/*  Media Query */
+
+@media (min-width: 600px) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card-img img {
+    height: 100%;
+    object-fit: cover;
+    width: 300px;
+  }
+
+  .card-info {
+    padding: 32px;
+  }
+}
